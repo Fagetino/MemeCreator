@@ -8,7 +8,7 @@ export default function MemeButton(props) {
   return (
     <View style={styles.container}>
         <TouchableOpacity
-            onPress={() => navigation.navigate('History', {memeType: meme.name})}
+            onPress={() => navigation.navigate('MemeCadre', {memeType: meme.name})}
         >
             <Image source={meme.image} style={styles.img} />
         </TouchableOpacity>   

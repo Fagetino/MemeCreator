@@ -7,10 +7,10 @@ export default function HomeScreen({navigation}) {
   const data = [
     {
       name: 'Cadre',
-      image: require(`../assets/textMeme.jpg`)
+      image: require(`../assets/cadre_meme.png`)
     },
     {
-      name: 'ok',
+      name: 'Classique',
       image: require(`../assets/textMeme.jpg`)
     },
     {
