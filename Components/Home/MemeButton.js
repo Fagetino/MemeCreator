@@ -12,7 +12,7 @@ export default function MemeButton(props) {
         >
             <Image source={meme.image} style={styles.img} />
         </TouchableOpacity>   
-        <Text>{meme.name}</Text>
+        <Text style={styles.text}>{meme.name}</Text>
     </View>
   );
 }
@@ -20,7 +20,6 @@ export default function MemeButton(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: hp('1%')
@@ -29,5 +28,8 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     width: wp('35%'),
     height: wp('35%')
+  },
+  text: {
+    color: '#fff'
   }
 });

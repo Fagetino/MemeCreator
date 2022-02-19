@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import * as Picker from 'expo-image-picker';
+import * as Colors from '../assets/colors';
 
 export default class ImagePicker extends React.Component{
     constructor(props){
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
 
     button: {
         padding: '2.5%',
-        backgroundColor: '#000',
+        backgroundColor: Colors.tertiaryColor,
         borderRadius: 20,
         alignItems: 'center',
         alignSelf: 'center',

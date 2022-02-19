@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Keyboard, SafeAreaView, LogBox } from 'react-native';
 import ImagePicker from './ImagePicker'
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import * as Colors from '../assets/colors';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 export default function MemeCadre({ navigation }){
   const [ uri, setUri ] = useState(null);
@@ -64,48 +69,42 @@ export default function MemeCadre({ navigation }){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      marginTop: 20
-    },
-    title: {
-      fontSize: 40,
-      color: '#000',
-      alignSelf: 'center'
+      backgroundColor: Colors.primaryColor,
+      marginTop: hp('3%')
     },
     subtitle: {
-      color: '#000',
-      fontSize: 18,
-      marginTop: '5%'
+      color: '#fff',
+      fontSize: hp('2.8%'),
+      marginTop: hp('3%')
     },
     input: {
-      borderColor: '#000',
-      borderWidth: 1,
-      fontSize: 20,
+      backgroundColor: '#fff',
+      fontSize: hp('3%'),
       borderRadius: 20,
       color: '#121212',
       padding: '2.5%'
     },
     text_container: {
       flex: 1,
-      marginHorizontal: '5%',    
+      marginHorizontal: wp('5%'),    
     },
     button: {
       padding: '2.5%',
-      backgroundColor: '#000',
+      backgroundColor: Colors.tertiaryColor,
       borderRadius: 20,
       alignItems: 'center',
       alignSelf: 'center',
-      width: '45%',
-      marginTop: '2.5%',
-      marginBottom: '5%'
+      width: wp('45%'),
+      marginTop: hp('2.5%'),
+      marginBottom: hp('2.5%')
     },
     text_button: {
       color: '#fff'
     },
     part_containter: {
-      borderWidth: 1,
       borderRadius: 20,
-      paddingHorizontal: 5,
-      marginVertical: 50
+      paddingHorizontal: wp('2.5%'),
+      marginVertical: hp('3%'),
+      backgroundColor: Colors.secondaryColor
     }
 });
